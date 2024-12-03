@@ -74,6 +74,7 @@ main {
     color: white !important;  
     border-radius: 5px !important; 
     padding: 5px !important; 
+    font-size: 0.9em;
 }
 
 
@@ -122,4 +123,18 @@ footer {
     color: #dcdcdc;
     margin-left: 10px;
   }
+  /* Pour les écrans de moins de 768px de large (comme les smartphones) */
+@media (max-width: 768px) {
+    #calendar {
+        grid-template-columns: repeat(4, 1fr); 
+    }
+}
+
+/* Pour les écrans plus petits (ex: mobile portrait) */
+@media (max-width: 480px) {
+    #calendar {
+        grid-template-columns: repeat(3, 1fr); 
+    }
+}
+
   
