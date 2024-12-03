@@ -52,14 +52,17 @@ main {
     justify-content: flex-start;
     text-align: center;
 }
-
+@media (max-width: 768px) {
 #calendar {
-
-    width: 100%;              
-    height: auto;       
-    box-sizing: border-box;   
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    margin: 0 auto;
 }
-
+.fc-daygrid-day {
+    padding: 5px; /* Ajuste les cases pour les adapter à l'écran */
+    min-height: 70px;
+}
 
 .fc-daygrid-event {
     white-space: normal !important;  
@@ -67,7 +70,7 @@ main {
     font-size: 0.85rem; 
   
 }
-
+}
 
 
 #evenements-astro {

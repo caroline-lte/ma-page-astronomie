@@ -2,7 +2,8 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="theme-color" content="#000000">
     <title>Calendrier des Événements Astronomiques</title>
@@ -108,24 +109,15 @@ document.addEventListener('DOMContentLoaded', function() {
 // Mars 2025
 { title: '🌒Éclipse solaire partielle', date: '2025-03-29' },
         ],
-        
-        height: 'auto',
-        contentHeight: 'auto',
-        eventsSet: function() {
-    document.querySelectorAll('.fc-daygrid-event').forEach(function(event) {
-        event.style.whiteSpace = 'normal'; 
-        event.style.wordWrap = 'break-word'; 
-        event.style.fontSize = '0.9rem'; 
-        event.style.height = 'auto';
-        
+       
+        height: 'auto', 
+        contentHeight: 'auto', 
+        windowResize: function(view) {  
+            calendarEl.style.width = "100%";
+        }
     });
-}
-
-    });
-
     calendar.render();
 });
-
 
 
 
