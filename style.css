@@ -299,15 +299,15 @@ main {
         opacity: 1;
     }
 }
-.btn {
+header .btn {
+    display: inline-block;
+    background-color: rgb(206, 73, 95);
     color: white;
-    background-color: rgb(206, 73, 95); /* Rose */
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
-    font-weight: bold;
 }
 
-.btn:hover {
-    background-color: #d1006e; /* Rose plus foncé au survol */
+header .btn:hover {
+    background-color: #d1006e;
 }

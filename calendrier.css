@@ -54,7 +54,7 @@ main {
 }
 
 #calendar {
-    width: 100%;
+    width: 80%;
     height: auto;
     margin-top: 20px;
     background-color: transparent;
@@ -92,4 +92,34 @@ main {
     .fc-daygrid-day-number {
         font-size: 0.9rem;
     }
+}
+#evenements-astro {
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 20px;
+    border-radius: 10px; 
+}
+
+#evenements-astro h3 {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #fff; 
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+#evenements-astro p {
+    font-size: 1em; 
+    color: #ddd; 
+    line-height: 1.6; 
+    margin-bottom: 20px;
+    text-align: justify;
+}
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #282c34;
+    color: white;
+    position: static;
+    width: 100%;
 }
