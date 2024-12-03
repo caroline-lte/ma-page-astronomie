@@ -114,12 +114,13 @@ document.addEventListener('DOMContentLoaded', function() {
         height: 'auto',
         contentHeight: 'auto',
         eventsSet: function() {
-            // Ajuster le contenu du calendrier pour éviter le débordement du texte
-            document.querySelectorAll('.fc-daygrid-event').forEach(function(event) {
-                event.style.whiteSpace = 'normal';   // Permet au texte de se diviser
-                event.style.wordWrap = 'break-word'; // Empêche le texte de déborder
-            });
-        }
+    document.querySelectorAll('.fc-daygrid-event').forEach(function(event) {
+        event.style.whiteSpace = 'normal'; // Permet au texte de se diviser
+        event.style.wordWrap = 'break-word'; // Empêche le texte de déborder
+        event.style.fontSize = '0.9rem'; // Réduit légèrement la taille du texte
+    });
+}
+
     });
 
     calendar.render();

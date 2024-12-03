@@ -3,12 +3,13 @@ body {
     margin: 0;
     padding: 0;
     background-image: url('images/ecran.jpg');
-    background-size: cover;
-    background-position: center;
+    background-size: cover; 
+    background-position: center center; 
+    background-attachment: fixed;
     color: #fff;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; 
+    min-height: 100vh;
 }
 
 header {
@@ -40,28 +41,23 @@ header .btn:hover {
     background-color: #d1006e;
 }
 
-
 main {
     flex: 1; 
-    width: 80vw;
-    text-align: center;
+    width: 90%; 
+    max-width: 100%; 
     margin: 20px auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start; 
+    justify-content: flex-start;
+    text-align: center;
 }
 
-
-
+/* Styles généraux du calendrier */
 #calendar {
-    display: flex;  
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 100%; 
-    max-width: 800px; 
-    height: auto; 
-    margin-top: 20px; 
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
     background-color: transparent;
     color: white;
     border-radius: 30px;
@@ -69,6 +65,7 @@ main {
     box-sizing: border-box;
 }
 
+/* Ajustement des événements */
 .fc-daygrid-event {
     white-space: normal !important; 
     word-wrap: break-word !important;
@@ -76,69 +73,44 @@ main {
     background-color: #474c51 !important;  
     color: white !important;  
     border-radius: 5px !important; 
-    padding: 5px !important; 
     font-size: 0.9em;
 }
 
-
-
-
-footer {
-    text-align: center;
-    background-color: rgba(51, 51, 51, 0.7);
-    color: white;
-    padding: 10px;
-    width: 100%;
-    margin-top: auto; 
+/* Ajustement des événements et des dates */
+.fc-daygrid-day-number {
+    font-size: 1.1em;
 }
-#evenements-astro {
-    margin-top: 20px;
-    padding: 30px;
-    background-color: rgba(0, 0, 0, 0.6);
-    color: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 100%; 
-    box-sizing: border-box; 
-  }
-  
 
-  
-  #evenements-astro ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  #evenements-astro li {
-    margin-bottom: 20px;
-  }
-  
-  #evenements-astro li h3 {
-    font-size: 1.4em;
-    margin-bottom: 10px;
-    font-weight: 600;
-    color: #f1f1f1;
-  }
-  
-  #evenements-astro li p {
-    font-size: 1em;
-    line-height: 1.8;
-    color: #dcdcdc;
-    margin-left: 10px;
-  }
-
-  @media (max-width: 768px) {
+/* Responsivité pour les petits écrans */
+@media (max-width: 768px) {
     #calendar {
-        display: grid;  /* Appliquer le grid ici */
-        grid-template-columns: repeat(4, 1fr);  /* 4 colonnes */
-        gap: 10px;  /* Espace entre les éléments */
+        padding: 10px;  /* Ajoute une petite marge sur les bords */
+        box-sizing: border-box;
+    }
+
+    /* Ajuster la taille de la police des événements */
+    .fc-daygrid-event {
+        font-size: 0.8rem;
+        padding: 5px;
+    }
+
+    /* Réduire la taille des numéros de jour */
+    .fc-daygrid-day-number {
+        font-size: 0.9rem;
     }
 }
 
-/* Pour les très petits écrans (ex: mobile portrait) */
+/* Pour les très petits écrans, comme les smartphones en mode portrait */
 @media (max-width: 480px) {
     #calendar {
-        grid-template-columns: repeat(3, 1fr);  /* 3 colonnes pour les très petits écrans */
+        padding: 5px;
+    }
+
+    .fc-daygrid-event {
+        font-size: 0.7rem;
+    }
+
+    .fc-daygrid-day-number {
+        font-size: 0.8rem;
     }
 }
-  
