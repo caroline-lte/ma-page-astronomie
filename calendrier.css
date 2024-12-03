@@ -53,7 +53,6 @@ main {
     text-align: center;
 }
 
-/* Styles généraux du calendrier */
 #calendar {
     width: 100%;
     height: auto;
@@ -65,7 +64,6 @@ main {
     box-sizing: border-box;
 }
 
-/* Ajustement des événements */
 .fc-daygrid-event {
     white-space: normal !important; 
     word-wrap: break-word !important;
@@ -76,41 +74,22 @@ main {
     font-size: 0.9em;
 }
 
-/* Ajustement des événements et des dates */
 .fc-daygrid-day-number {
     font-size: 1.1em;
 }
 
-/* Responsivité pour les petits écrans */
 @media (max-width: 768px) {
     #calendar {
-        padding: 10px;  /* Ajoute une petite marge sur les bords */
+        padding: 10px;
         box-sizing: border-box;
     }
 
-    /* Ajuster la taille de la police des événements */
     .fc-daygrid-event {
         font-size: 0.8rem;
         padding: 5px;
-    }
-
-    /* Réduire la taille des numéros de jour */
-    .fc-daygrid-day-number {
-        font-size: 0.9rem;
-    }
-}
-
-/* Pour les très petits écrans, comme les smartphones en mode portrait */
-@media (max-width: 480px) {
-    #calendar {
-        padding: 5px;
-    }
-
-    .fc-daygrid-event {
-        font-size: 0.7rem;
     }
 
     .fc-daygrid-day-number {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
     }
 }
