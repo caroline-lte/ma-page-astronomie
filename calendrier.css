@@ -62,14 +62,17 @@ main {
 .fc-daygrid-day {
     padding: 5px; /* Ajuste les cases pour les adapter à l'écran */
     min-height: 70px;
+
 }
 
 .fc-daygrid-event {
     white-space: normal !important;  
     word-wrap: break-word !important; 
     font-size: 0.85rem; 
+
   
 }
+
 }
 
 
@@ -117,4 +120,23 @@ footer a {
 footer a:hover {
     color: #fff;        /* Changer la couleur du lien au survol */
     text-decoration: underline; /* Ajouter un souligné au survol */
+}
+/* Modifier la couleur de fond des jours du calendrier */
+
+
+/* Modifier le fond des événements */
+.fc-daygrid-event {
+    background-color: rgba(71, 55, 58, 0.8) !important; 
+    color: #fff !important;  
+}
+
+/* Gérer le survol des événements */
+.fc-daygrid-event:hover {
+    background-color: rgba(206, 73, 95, 1) !important;  /* Changer la couleur de fond des événements au survol */
+}
+
+/* Gérer les jours "aujourd'hui" */
+.fc-day-today {
+    background-color: rgba(232, 39, 106, 0.595) !important;  /* Fond rouge pour le jour actuel */
+    color: white !important;
 }
