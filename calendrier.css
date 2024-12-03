@@ -103,3 +103,18 @@ footer {
     position: static;
     width: 100%;
 }
+footer p {
+    font-size: 0.8rem;  /* Taille plus petite */
+    color: #888;        /* Couleur grise discrète */
+    text-align: center; /* Centrer le texte */
+}
+
+footer a {
+    color: #888;        /* Couleur du lien discrète */
+    text-decoration: none; /* Enlever le souligné */
+}
+
+footer a:hover {
+    color: #fff;        /* Changer la couleur du lien au survol */
+    text-decoration: underline; /* Ajouter un souligné au survol */
+}
