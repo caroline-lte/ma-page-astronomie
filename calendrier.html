@@ -110,16 +110,27 @@ document.addEventListener('DOMContentLoaded', function() {
 { title: '🌒Éclipse solaire partielle', date: '2025-03-29' },
         ],
        
-        height: 'auto', 
-        contentHeight: 'auto', 
-        windowResize: function(view) {  
-            calendarEl.style.width = "100%";
+        height: 'auto',
+        contentHeight: 'auto',
+        eventsSet: function() {
+            document.querySelectorAll('.fc-daygrid-event').forEach(function(event) {
+                event.style.whiteSpace = 'normal';
+                event.style.wordWrap = 'break-word';
+                event.style.fontSize = '0.9rem';
+                event.style.height = 'auto';
+            });
+        },
+        eventContent: function(arg) {
+            var customContent = document.createElement('div');
+            // Remplacer les "\n" par des balises <br> pour les sauts de ligne
+            var eventText = arg.event.title.replace(/\n/g, '<br>');
+            customContent.innerHTML = `<strong>${eventText}</strong>`;
+            return { domNodes: [ customContent ] };
         }
     });
+
     calendar.render();
 });
-
-
 
 
     </script>
