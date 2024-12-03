@@ -107,17 +107,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Mars 2025
 { title: '🌒Éclipse solaire partielle', date: '2025-03-29' },
-
-
-
         ],
+        
         height: 'auto',
         contentHeight: 'auto',
         eventsSet: function() {
     document.querySelectorAll('.fc-daygrid-event').forEach(function(event) {
-        event.style.whiteSpace = 'normal'; // Permet au texte de se diviser
-        event.style.wordWrap = 'break-word'; // Empêche le texte de déborder
-        event.style.fontSize = '0.9rem'; // Réduit légèrement la taille du texte
+        event.style.whiteSpace = 'normal'; 
+        event.style.wordWrap = 'break-word'; 
+        event.style.fontSize = '0.9rem'; 
+        event.style.height = 'auto';
+        
     });
 }
 
@@ -125,6 +125,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     calendar.render();
 });
+
 
 
 

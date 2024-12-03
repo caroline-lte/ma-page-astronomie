@@ -54,45 +54,22 @@ main {
 }
 
 #calendar {
-    width: 80%;
-    height: auto;
-    margin-top: 20px;
-    background-color: transparent;
-    color: white;
-    border-radius: 30px;
-    padding: 5px;
-    box-sizing: border-box;
+
+    width: 100%;              
+    height: auto;       
+    box-sizing: border-box;   
 }
+
 
 .fc-daygrid-event {
-    white-space: normal !important; 
-    word-wrap: break-word !important;
-    padding: 5px;
-    background-color: #474c51 !important;  
-    color: white !important;  
-    border-radius: 5px !important; 
-    font-size: 0.9em;
+    white-space: normal !important;  
+    word-wrap: break-word !important; 
+    font-size: 0.85rem; 
+  
 }
 
-.fc-daygrid-day-number {
-    font-size: 1.1em;
-}
 
-@media (max-width: 768px) {
-    #calendar {
-        padding: 10px;
-        box-sizing: border-box;
-    }
 
-    .fc-daygrid-event {
-        font-size: 0.8rem;
-        padding: 5px;
-    }
-
-    .fc-daygrid-day-number {
-        font-size: 0.9rem;
-    }
-}
 #evenements-astro {
     background-color: rgba(0, 0, 0, 0.5); 
     padding: 20px;
