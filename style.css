@@ -307,6 +307,7 @@ header .btn {
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
+    text-align: center;
 }
 
 header .btn:hover {
@@ -431,4 +432,10 @@ footer a {
 footer a:hover {
     color: #fff;        /* Changer la couleur du lien au survol */
     text-decoration: underline; /* Ajouter un souligné au survol */
+}
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8em;  /* Réduit la taille du titre sur les petits écrans */
+    }
+
 }
