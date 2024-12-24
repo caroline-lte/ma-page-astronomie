@@ -60,6 +60,14 @@ main {
     }
 
 }
+html, body {
+    overflow-x: hidden; /* Empêche le défilement horizontal */
+    height: 100%; /* S'assure que le body prend toute la hauteur de l'écran */
+    margin: 0;    /* Retire les marges par défaut */
+    padding: 0;   /* Retire les paddings par défaut */
+}
+
+
 
 @media (max-width: 768px) {
 #calendar {

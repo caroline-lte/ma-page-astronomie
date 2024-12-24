@@ -10,6 +10,7 @@ body {
     min-width: 100%;
 }
 
+
 header {
     display: flex;
     align-items: center;
@@ -44,6 +45,12 @@ main {
     padding: 0 10px;
     box-sizing: border-box;
     width: 100%;
+}
+html, body {
+    overflow-x: hidden; /* Empêche le défilement horizontal */
+    height: 100%; /* S'assure que le body prend toute la hauteur de l'écran */
+    margin: 0;    /* Retire les marges par défaut */
+    padding: 0;   /* Retire les paddings par défaut */
 }
 
 .quiz {
@@ -438,4 +445,13 @@ footer a:hover {
         font-size: 1.8em;  /* Réduit la taille du titre sur les petits écrans */
     }
 
+}
+/* Centrage quizz */
+@media (max-width: 768px) {
+    .quiz {
+        display: block;
+        margin: 0 auto; 
+        width: 90%;  
+        max-width: 800px; 
+    }
 }
