@@ -1,11 +1,13 @@
-body {
-    overflow-x: hidden;
-    font-family: Arial, sans-serif;
+/* Style général */
+html, body {
+    height: 100%; /* S'assure que le body prend toute la hauteur de l'écran */
     margin: 0;
     padding: 0;
+    overflow-x: hidden; /* Empêche le défilement horizontal */
+    font-family: Arial, sans-serif;
     background-image: url('images/ecran.jpg');
-    background-size: cover; 
-    background-position: center center; 
+    background-size: cover;
+    background-position: center center;
     background-attachment: fixed;
     color: #fff;
     display: flex;
@@ -13,14 +15,15 @@ body {
     min-height: 100vh;
 }
 
+/* Header */
 header {
     display: flex;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
     padding: 20px;
     background-color: rgba(51, 51, 51, 0.7);
     width: 100%;
-    gap: 20px; 
+    gap: 20px;
     box-sizing: border-box;
 }
 
@@ -43,10 +46,11 @@ header .btn:hover {
     background-color: #d1006e;
 }
 
+/* Main Content */
 main {
-    flex: 1; 
-    width: 90%; 
-    max-width: 100%; 
+    flex: 1;
+    width: 90%;
+    max-width: 100%;
     margin: 20px auto;
     display: flex;
     flex-direction: column;
@@ -54,67 +58,83 @@ main {
     justify-content: flex-start;
     text-align: center;
 }
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 1.8em;  /* Réduit la taille du titre sur les petits écrans */
-    }
 
-}
-html, body {
-    overflow-x: hidden; /* Empêche le défilement horizontal */
-    height: 100%; /* S'assure que le body prend toute la hauteur de l'écran */
-    margin: 0;    /* Retire les marges par défaut */
-    padding: 0;   /* Retire les paddings par défaut */
+
+
+
+/* FullCalendar */
+.fc-scroller {
+    overflow-x: auto;
 }
 
-
-
-@media (max-width: 768px) {
-#calendar {
-    width: 100%;
-    height: auto;
-    box-sizing: border-box;
-    margin: 0 auto;
+.fc-daygrid-month-view {
+    display: flex;
+    flex-wrap: wrap;
 }
+
+.fc-daygrid-week {
+    flex-direction: row;
+}
+
 .fc-daygrid-day {
-    padding: 5px; /* Ajuste les cases pour les adapter à l'écran */
-    min-height: 70px;
-
+    min-width: 1000px;
+    height: 1000px;
+    overflow: hidden;
+    padding: 5px;
 }
 
 .fc-daygrid-event {
-    white-space: normal !important;  
-    word-wrap: break-word !important; 
-    font-size: 0.85rem; 
-
-  
+    background-color: rgba(71, 55, 58, 0.8) !important;
+    color: #fff !important;
+    white-space: normal !important;
+    word-wrap: break-word !important;
+    font-size: 0.85rem;
+}
+.fc-daygrid-day {
+    min-width: 80px !important;
+    height: auto !important;
 }
 
+
+.fc-daygrid-event:hover {
+    background-color: rgba(206, 73, 95, 1) !important;
 }
 
+.fc-day-today {
+    background-color: rgba(232, 39, 106, 0.595) !important;
+    color: white !important;
+}
 
+.fc-daygrid-day-number {
+    white-space: nowrap;
+}
+
+/* Evenements Astro */
 #evenements-astro {
-    background-color: rgba(0, 0, 0, 0.5); 
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 20px;
-    border-radius: 10px; 
+    border-radius: 10px;
 }
 
 #evenements-astro h3 {
     font-size: 1.5em;
     font-weight: bold;
-    color: #fff; 
+    color: #fff;
     margin-bottom: 10px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
 
+
 #evenements-astro p {
-    font-size: 1em; 
-    color: #ddd; 
-    line-height: 1.6; 
+    font-size: 1em;
+    color: #ddd;
+    line-height: 1.6;
     margin-bottom: 20px;
     text-align: justify;
 }
+
+/* Footer */
 footer {
     text-align: center;
     padding: 10px;
@@ -123,37 +143,26 @@ footer {
     position: static;
     width: 100%;
 }
+
 footer p {
-    font-size: 0.8rem;  /* Taille plus petite */
-    color: #888;        /* Couleur grise discrète */
-    text-align: center; /* Centrer le texte */
+    font-size: 0.8rem;
+    color: #888;
 }
 
 footer a {
-    color: #888;        /* Couleur du lien discrète */
-    text-decoration: none; /* Enlever le souligné */
+    color: #888;
+    text-decoration: none;
 }
 
 footer a:hover {
-    color: #fff;        /* Changer la couleur du lien au survol */
-    text-decoration: underline; /* Ajouter un souligné au survol */
-}
-/* Modifier la couleur de fond des jours du calendrier */
-
-
-/* Modifier le fond des événements */
-.fc-daygrid-event {
-    background-color: rgba(71, 55, 58, 0.8) !important; 
-    color: #fff !important;  
+    color: #fff;
+    text-decoration: underline;
 }
 
-/* Gérer le survol des événements */
-.fc-daygrid-event:hover {
-    background-color: rgba(206, 73, 95, 1) !important;  /* Changer la couleur de fond des événements au survol */
-}
+/* Responsivité */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8em;
+    }
 
-/* Gérer les jours "aujourd'hui" */
-.fc-day-today {
-    background-color: rgba(232, 39, 106, 0.595) !important;  /* Fond rouge pour le jour actuel */
-    color: white !important;
 }
